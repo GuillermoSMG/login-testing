@@ -22,7 +22,7 @@ function Input({
     <div>
       <TextField
         required={required}
-        disabled={disabled}
+        {...(disabled ? { disabled } : {})}
         type={type}
         error={errors && !!errors[name]}
         id={name}

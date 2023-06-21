@@ -25,7 +25,7 @@ function LoginForm() {
   const userNameWatch = watch('username');
   const passwordWatch = watch('password');
   const onSubmit = async data => {
-    const result = await callEndpoint();
+    const result = await callEndpoint(data);
     console.log(result);
     reset();
   };
